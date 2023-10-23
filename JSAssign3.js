@@ -40,43 +40,69 @@ document.getElementById("addButton").addEventListener("click", addTask);
 
 //registration
 document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('myForm');
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const passwordInput = document.getElementById('password');
-            const errorMessages = document.getElementById('errorMessages');
+    const form = document.getElementById('myForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const errorMessages = document.getElementById('errorMessages');
 
-            form.addEventListener('submit', function (event) {
-                let errors = [];
+    form.addEventListener('submit', function (event) {
+        let errors = [];
 
-                if (nameInput.value.trim() === '') {
-                    errors.push('Name is required');
-                }
+        if (nameInput.value.trim() === '') {
+            errors.push('Name is required');
+        }
 
-                if (emailInput.value.trim() === '') {
-                    errors.push('Email is required');
-                } else if (!isValidEmail(emailInput.value)) {
-                    errors.push('Invalid email format');
-                }
+        if (emailInput.value.trim() === '') {
+            errors.push('Email is required');
+        } else if (!isValidEmail(emailInput.value)) {
+            errors.push('Invalid email format');
+        }
 
-                if (passwordInput.value.trim() === '') {
-                    errors.push('Password is required');
-                }
+        if (passwordInput.value.trim() === '') {
+            errors.push('Password is required');
+        }
 
-                if (errors.length > 0) {
-                    event.preventDefault(); // Prevent form submission
-                    errorMessages.innerHTML = errors.join('<br>');
-                } else {
-                    errorMessages.innerHTML = ''; // Clear any previous error messages
-                }
-            });
+        if (errors.length > 0) {
+            event.preventDefault(); // Prevent form submission
+            errorMessages.innerHTML = errors.join('<br>');
+        } else {
+            errorMessages.innerHTML = ''; // Clear any previous error messages
+        }
+    });
 
-            function isValidEmail(email) {
-                // This is a simple email validation function, you can use a more complex one if needed.
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
-            }
+    function isValidEmail(email) {
+        // This is a simple email validation function, you can use a more complex one if needed.
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Prevent form submission when the input fields lose focus
+    nameInput.addEventListener('blur', function () {
+        if (nameInput.value.trim() === '') {
+            errorMessages.innerHTML = 'Name is required';
+        } else {
+            errorMessages.innerHTML = '';
+        }
+    });
+
+    emailInput.addEventListener('blur', function () {
+        if (emailInput.value.trim() === '') {
+            errorMessages.innerHTML = 'Email is required';
+        } else {
+            errorMessages.innerHTML = '';
+        }
+    });
+
+    passwordInput.addEventListener('blur', function () {
+        if (passwordInput.value.trim() === '') {
+            errorMessages.innerHTML = 'Password is required';
+        } else {
+            errorMessages.innerHTML = '';
+        }
+    });
 });
+
 
 //timer
 
