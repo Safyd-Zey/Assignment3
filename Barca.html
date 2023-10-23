@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Football-Team.png">
+    <title>Football team</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+    </style>
+    <div class="container-fluid">
+        <header>
+            <h1>Football team</h1>
+            <p>Website about sport</p>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <img class="navbar-brand" src="Football-Team.png" alt="logo" width="50">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Select country</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Spain.html">Spain</a></li>
+                                    <li><a class="dropdown-item" href="Germany.html">Germany</a></li>
+                                    <li><a class="dropdown-item" href="England.html">England</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="f">
+                        <section class="champ" id="champ">
+                            <h2>Barcelona</h2>
+                            <img src="data:image/png;base64,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" alt="barca" width="300">
+                        </section>
+                        <section>
+                            <h2>Datailed information:</h2>
+                            <p>"Barcelona" (cat. Futbol Club Barcelona, Catalan pronunciation: [fubˈbɔl ˈklub bəɾsəˈlonə] (Sound listen); Spanish. Fútbol Club Barcelona), also known as "Barça" (Spanish and cat. Barça) is a Spanish professional football club from city of the same name, the most titled club in Spain and the top 5 championships. Founded in 1899 by a group of Swiss, British, Spanish and Catalan football players led by Joan Gamper. The club has become one of the symbols of Catalonia, hence the motto - Més que un club - “More than a club”. Fans of FC Barcelona are also known as "culés".</p>
+
+                        </section>
+
+
+                        <hr />
+                        <section id="about">
+                            <h2>About Project</h2>
+                            <p>This project was specially created for Astana IT University by Zeytkazy Sayat. <br />The project has no particular meaning other than educational. <br />The idea is to create a site similar to Wikipedia, but specialized on football clubs. <br />Club fans will fill out or add to the pages themselves.</p>
+                        </section>
+                        <hr />
+                        <section id="contact">
+                            <h2>Contact Us</h2>
+                            <form action="contact.php" method="POST">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </form>
+                        </section>
+                    </td>
+                    <td class="s">
+                        <!--Section fot tabs-->
+                        <section id="tab">
+                            <h2>Best playaer of the week</h2>
+                            <div class="tab">
+                                <button class="tablinks" onclick="openCity(event, 'De_Jong')">De Jong</button>
+                                <button class="tablinks" onclick="openCity(event, 'Stegen')">ter Stegen</button>
+                                <button class="tablinks" onclick="openCity(event, 'Raphinha')">Raphinha</button>
+                            </div>
+
+                            <div id="De_Jong" class="tabcontent">
+                                <img src="https://img.a.transfermarkt.technology/portrait/big/326330-1656499973.png?lm=1" alt="dj" width=200>
+                                <h3>De Jong</h3>
+                            </div>
+
+                            <div id="Stegen" class="tabcontent">
+                                <img src="https://img.a.transfermarkt.technology/portrait/big/74857-1674465246.jpg?lm=1" alt="ts" width="200" />
+                                <h3>ter Stegen</h3>
+                            </div>
+
+                            <div id="Raphinha" class="tabcontent">
+                                <img src="https://img.a.transfermarkt.technology/portrait/big/411295-1665127690.jpg?lm=1" alt="r" width="200" />
+                                <h3>Raphinha</h3>
+                            </div>
+                        </section>
+
+                        <!--Create section "todo-list" in html-->
+                        <section id="todo-list" class="todo">
+                            <h2>Clubs you want to know more about...</h2>
+
+                            <input type="text" id="taskInput" placeholder="names of clubs">
+                            <button id="addButton">Add</button>
+
+                            <ul id="taskList">
+                                <!-- Space for tasks -->
+                            </ul>
+                        </section>
+
+                        <!--Section "timer" for timer-->
+                        <section class="timer">
+                            <h2>Set a timer</h2>
+                            <div id="timer">00:00 </div>
+                            <input type="number" id="duration" placeholder="Enter duration in seconds">
+                            <button onclick="startTimer()">Start Timer</button>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2023 Football team</p>
+            <ul>
+                <li><img src="https://cdn.icon-icons.com/icons2/509/PNG/512/YouTube_icon-icons.com_49934.png" width="30"><a href="https://www.youtube.com/">Youtube</a></li>
+                <li><img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/telegram_icon_136124.png" width="30"><a href="https://web.telegram.org/">Telegram</a></li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/1936/1936319.png" width="30"><a href="https://www.instagram.com/">Instagram</a></li>
+            </ul>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

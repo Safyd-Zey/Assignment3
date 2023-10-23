@@ -1,0 +1,257 @@
+﻿
+body, h1, h2, p, ul, li, form {
+    margin: 5px;
+    padding: 0px;
+}
+
+
+div.card{
+    width: 80%;
+}
+
+
+
+hr {
+    border: 2px; 
+    color: gray; 
+    background-color: gray; 
+    height: 3px; 
+}
+a{
+    color:black;
+}
+    a:hover {
+        text-decoration: none; 
+        color: white; 
+        background: #0094ff; 
+    }
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background-image: url(поле.jpg)
+}
+
+header > p{
+    color: white;
+    font-weight: 700;
+}
+
+    header > h1::before {
+        content: '⚽'
+    }
+    header > h1::after {
+        content: '⚽'
+    }
+header a:hover{
+    background-color:black;
+}
+
+table {
+    border: 3px solid gray;
+    width: 100% ;
+    background-color: #333;
+}
+tr {
+    border: 3px solid gray;
+    width: 100%;
+}
+td.f {
+    width: 75%;
+    border: 3px solid gray;
+}
+td.s {
+    background-image: url("https://img.goodfon.ru/wallpaper/big/4/1a/seryi-linii-lines-grey-fon.jpg") ;
+    border: 3px solid gray;
+    vertical-align: top;
+    width: 25%
+}
+td.s h2{
+    text-align: center;
+}
+section.second {
+    border: 3px solid grey;
+    background-color: white;
+}
+nav ol {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    padding: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid gray;
+    background-color: white;
+}
+.champ > ul {
+    border-left: 4px solid gray;
+    list-style: none;
+    padding-left: 15px;
+   
+}
+#myForm {
+    margin: 10px 10px 10px 10px;
+}
+input {
+    padding: 5px;
+    margin: 10px;
+}
+
+/*add css to li in todo-list*/
+
+section.todo > #taskList > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+section.todo > input[type="text"] {
+    width: 70%;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+div > img.card-img{
+    height: 100px;
+    width:auto;
+}
+
+form {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-image: url(https://img.goodfon.ru/wallpaper/big/4/1a/seryi-linii-lines-grey-fon.jpg);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+    footer ul {
+        list-style: none;
+        color: white;
+    }
+    footer li {
+        display: inline;
+        margin-right: 20px;
+        padding: 2px;
+    }
+    footer a{
+        color: white;
+    }
+/*Accordion css*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*for timer*/
+section.timer > #timer{
+    text-align:center;
+    font-size: 30px;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align:center;
+}
+
+    
+    .tab button {
+        background-color: inherit;
+        color: dimgrey;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 7px 8px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+       
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+       
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+
+.tabcontent {
+    display: none;
+    padding: 3px 6px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align:center;
+}

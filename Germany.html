@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Football-Team.png">
+    <title>Football team</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+    </style>
+    <div class="container-fluid">
+        <header>
+            <h1>Football team</h1>
+            <p>Website about sport</p>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <img class="navbar-brand" src="Football-Team.png" alt="logo" width="50">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Select country</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="Spain.html">Spain</a></li>
+                                    <li><a class="dropdown-item" href="Germany.html">Germany</a></li>
+                                    <li><a class="dropdown-item" href="England.html">England</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Select team</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/1._FC_Union_Berlin">Union Berlin</a></li>
+                                  </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="f">
+                        <section class="champ" id="country">
+                            <h2>Germany</h2>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg" alt="ger" width="400">
+
+                            <div class="container mt-3">
+                                <h4>Clubs</h4>
+                                <ul class="list-group list-group-horizontal">
+                                    <li class="list-group-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1024px-Flag_of_Germany.svg.png" alt="ger" width="20"><a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%BD%D0%B8%D0%BE%D0%BD_(%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BB%D1%83%D0%B1,_%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD)" target="_parent">Union Berlin</a></li>
+                                </ul>
+                                <button type="button" class="btn btn-secondary btn-sm">Show more clubs</button>
+                            </div>
+                        </section>
+
+                        <hr />
+                        <section class="clubs">
+                            <h2>Clubs from this country</h2>
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <img class="card-img" src="data:image/png;base64,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" alt="union">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Union Berlin</h4>
+                                                    <p class="card-text">Union (German: 1. Fußballclub Union Berlin e. V.) is a German professional football club based in Köpenick, Berlin. The club arose under its current name in 1966, on the basis of Union Oberschöneweide, founded in 1906.</p>
+                                                    <a href="https://en.wikipedia.org/wiki/1._FC_Union_Berlin" class="btn btn-primary">See Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                        <hr />
+                        <section id="about">
+                            <h2>About Project</h2>
+                            <p>This project was specially created for Astana IT University by Zeytkazy Sayat. <br />The project has no particular meaning other than educational. <br />The idea is to create a site similar to Wikipedia, but specialized on football clubs. <br />Club fans will fill out or add to the pages themselves.</p>
+                        </section>
+                        <hr />
+                        <section id="contact">
+                            <h2>Contact Us</h2>
+                            <form action="contact.php" method="POST">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </form>
+                        </section>
+                    </td>
+                    <td class="s">
+                        <!--Section fot tabs-->
+                        <section id="tab">
+                            <h2>Best playaer of the week</h2>
+                            <div class="tab">
+                                <button class="tablinks" onclick="openCity(event, 'De_Jong')">De Jong</button>
+                                <button class="tablinks" onclick="openCity(event, 'Stegen')">ter Stegen</button>
+                                <button class="tablinks" onclick="openCity(event, 'Raphinha')">Raphinha</button>
+                            </div>
+
+                            <div id="De_Jong" class="tabcontent">
+                                <img src="https://img.a.transfermarkt.technology/portrait/big/326330-1656499973.png?lm=1" alt="dj" width=200>
+                                <h3>De Jong</h3>
+                            </div>
+
+                            <div id="Stegen" class="tabcontent">
+                                <img src="https://img.a.transfermarkt.technology/portrait/big/74857-1674465246.jpg?lm=1" alt="ts" width="200" />
+                                <h3>ter Stegen</h3>
+                            </div>
+
+                            <div id="Raphinha" class="tabcontent">
+                                <img src="https://img.a.transfermarkt.technology/portrait/big/411295-1665127690.jpg?lm=1" alt="r" width="200" />
+                                <h3>Raphinha</h3>
+                            </div>
+                        </section>
+
+                        <!--Create section "todo-list" in html-->
+                        <section id="todo-list" class="todo">
+                            <h2>Clubs you want to know more about...</h2>
+
+                            <input type="text" id="taskInput" placeholder="names of clubs">
+                            <button id="addButton">Add</button>
+
+                            <ul id="taskList">
+                                <!-- Space for tasks -->
+                            </ul>
+                        </section>
+
+                        <!--Section "timer" for timer-->
+                        <section class="timer">
+                            <h2>Set a timer</h2>
+                            <div id="timer">00:00 </div>
+                            <input type="number" id="duration" placeholder="Enter duration in seconds">
+                            <button onclick="startTimer()">Start Timer</button>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2023 Football team</p>
+            <ul>
+                <li><img src="https://cdn.icon-icons.com/icons2/509/PNG/512/YouTube_icon-icons.com_49934.png" width="30"><a href="https://www.youtube.com/">Youtube</a></li>
+                <li><img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/telegram_icon_136124.png" width="30"><a href="https://web.telegram.org/">Telegram</a></li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/1936/1936319.png" width="30"><a href="https://www.instagram.com/">Instagram</a></li>
+            </ul>
+        </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
